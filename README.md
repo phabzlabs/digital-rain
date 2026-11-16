@@ -68,7 +68,7 @@ Updating, uninstalling, multiple monitors and troubleshooting are covered in [In
 
 ## Build from source
 
-You need Windows and Python 3.14.
+On Windows you need Python 3.14.
 
 ```powershell
 git clone https://github.com/phabzlabs/digital-rain.git
@@ -77,7 +77,15 @@ python -m pip install -r requirements/requirements.txt
 python matrix_saver.py /s
 ```
 
-`/c` opens the settings window instead. `.\build.ps1` builds the installer. [Build and release](https://phabzlabs.github.io/digital-rain/build-and-release.html) has the details, and [macOS](https://phabzlabs.github.io/digital-rain/macos.html) covers the Mac build.
+`/c` opens the settings window instead. `.\build.ps1` builds the installer. [Build and release](https://phabzlabs.github.io/digital-rain/build-and-release.html) has the details.
+
+On a Mac, install Python 3.14 from python.org, clone the repository the same way, then build and install the saver:
+
+```bash
+bash tools/build/build_mac.sh --install
+```
+
+[macOS](https://phabzlabs.github.io/digital-rain/macos.html#build) has the details.
 
 ## Documentation
 
