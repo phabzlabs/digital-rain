@@ -230,7 +230,7 @@ def render(name, groups, order):
   <header class="top">
     <a class="mark" href="index.html">Digital Rain</a>
     <nav class="site" aria-label="Site">
-      <a class="hide-sm" href="index.html#looks">Looks</a>
+      <a class="hide-sm" href="index.html#films">Films</a>
       <a class="hide-sm" href="index.html#install">Install</a>
       <a href="docs.html" aria-current="page">Docs</a>
       <a href="https://github.com/phabzlabs/digital-rain">GitHub</a>
