@@ -142,18 +142,22 @@ def convert(name):
 
 FOOTER = """<footer>
   <div class="wrap">
-    <span>Made by <a href="https://github.com/phabzlabs">phabzlabs</a>, based on
-      <a href="https://github.com/madkoding/matrix-screensaver">madkoding's original</a>.</span>
-    <span class="links">
-      <a href="https://github.com/phabzlabs/digital-rain">Source code</a>
-      <a href="https://github.com/phabzlabs/digital-rain/issues">Report a problem</a>
-      <a href="https://github.com/phabzlabs/digital-rain/blob/main/LICENSE">GPL-3.0 licence</a>
-    </span>
-    <span>Digital Rain is an unofficial, Matrix-inspired fan project,
-      not affiliated with or endorsed by Warner Bros.</span>
-    <span>Optional upscaling based on
-      <a href="https://github.com/GPUOpen-Effects/FidelityFX-FSR">AMD FidelityFX Super Resolution
-      1.0</a> (MIT).</span>
+    <div>
+      <p>Made by <a href="https://github.com/phabzlabs">phabzlabs</a>, based on
+        <a href="https://github.com/madkoding/matrix-screensaver">madkoding's original</a>.</p>
+    </div>
+    <div>
+      <p class="links">
+        <a href="docs.html">Documentation</a>
+        <a href="https://github.com/phabzlabs/digital-rain">Source code</a>
+        <a href="https://github.com/phabzlabs/digital-rain/issues">Report a problem</a>
+        <a href="https://github.com/phabzlabs/digital-rain/blob/main/LICENSE">GPL-3.0 licence</a>
+      </p>
+      <p>Digital Rain is an unofficial, Matrix-inspired fan project, not affiliated with or
+        endorsed by Warner Bros. Optional upscaling is based on
+        <a href="https://github.com/GPUOpen-Effects/FidelityFX-FSR">AMD FidelityFX Super
+        Resolution 1.0</a> (MIT).</p>
+    </div>
   </div>
 </footer>"""
 
@@ -216,17 +220,20 @@ def render(name, groups, order):
 <meta name="description" content="{html.escape(desc)}">
 <meta name="color-scheme" content="dark">
 <link rel="canonical" href="{canonical}">
+<link rel="preload" href="fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2"
+  crossorigin>
+<link rel="stylesheet" href="fonts/archivo.css">
 <link rel="stylesheet" href="docs.css">
 </head>
 <body>
 <div class="wrap">
   <header class="top">
-    <a class="brand" href="index.html">Digital<span>Rain</span></a>
+    <a class="mark" href="index.html">Digital Rain</a>
     <nav class="site" aria-label="Site">
-      <a class="hide-sm" href="index.html#features">Features</a>
+      <a class="hide-sm" href="index.html#looks">Looks</a>
       <a class="hide-sm" href="index.html#install">Install</a>
       <a href="docs.html" aria-current="page">Docs</a>
-      <a class="hide-sm" href="https://github.com/phabzlabs/digital-rain">GitHub</a>
+      <a href="https://github.com/phabzlabs/digital-rain">GitHub</a>
     </nav>
   </header>
   <div class="docs">
@@ -269,6 +276,8 @@ def check_links(out):
                 continue
             page, _, frag = href.partition("#")
             page = page or f.name
+            if page in (".", "./"):
+                page = "index.html"  # a folder link serves index.html on GitHub Pages
             if page not in ids:
                 problems.append(f"{f.name}: link to missing page {href}")
             elif frag and frag not in ids[page]:
@@ -276,6 +285,10 @@ def check_links(out):
         for img in soup.find_all("img", src=True):
             if not re.match(r"^[a-z]+:", img["src"]) and not (out / img["src"]).exists():
                 problems.append(f"{f.name}: missing image {img['src']}")
+    for css in out.rglob("*.css"):
+        for ref in re.findall(r"url\(\s*['\"]?([^'\")]+)", css.read_text(encoding="utf-8")):
+            if not re.match(r"^[a-z]+:", ref) and not (css.parent / ref).exists():
+                problems.append(f"{css.relative_to(out)}: missing file {ref}")
     return problems
 
 
