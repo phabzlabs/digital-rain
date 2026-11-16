@@ -101,6 +101,10 @@ film and promotional material owned by Warner Bros. Entertainment Inc., and the 
 not settle who owns that artwork. This project relies on Rezmason's licence for those files and
 claims nothing further.
 
+## Archivo font
+
+The website uses Archivo by the Archivo Project Authors (Omnibus-Type, https://github.com/Omnibus-Type/Archivo), self-hosted in `docs/fonts/`. It is used by the website only, not by the screensaver. Archivo is licensed under the SIL Open Font License 1.1, and the licence text is in [`docs/fonts/OFL.txt`](docs/fonts/OFL.txt).
+
 ## Documentation photo
 
 `docs/picture.png` is a screenshot of the saver forming "Cat portrait" by Anton Petrov out of rain glyphs. The photo is released under CC0 on Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Cat_portrait_(Unsplash).jpg). The photo itself is not distributed in this repository.
