@@ -1,0 +1,5 @@
+# Development and check tooling (tools/ imports pillow; ruff is the linter; pytest runs tests/).
+-r requirements.txt
+pillow==13.0.0
+ruff==0.17.5
+pytest==9.2.0

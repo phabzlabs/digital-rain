@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Digital Rain: a Matrix-inspired screensaver for Windows and macOS</title>
+<meta name="description" content="Matrix-inspired digital rain as a multi-monitor screensaver for Windows and macOS: three film looks, mirrored katakana, glowing trails, depth, bloom and CRT scanlines. Free.">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://phabzlabs.github.io/digital-rain/">
+<meta property="og:title" content="Digital Rain: a Matrix-inspired screensaver for Windows and macOS">
+<meta property="og:description" content="Matrix-inspired digital rain as a multi-monitor screensaver for Windows and macOS: three film looks, mirrored katakana, glowing trails, depth, bloom and CRT scanlines. Free.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://phabzlabs.github.io/digital-rain/screenshot.png">
+<meta property="og:url" content="https://phabzlabs.github.io/digital-rain/">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root {
+  --bg: #010503; --panel: #04120a; --line: #0e3a1e; --text: #e8f1ee; --muted: #9bb0aa;
+  --accent: #00ff46; --accent-2: #7dffa0; --on-accent: #002208;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:hover { color: var(--accent-2); }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+header.top { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; gap: 12px; }
+.brand { font-weight: 700; letter-spacing: .02em; color: var(--text); text-decoration: none; }
+.brand span { color: var(--accent); }
+nav { display: flex; align-items: center; }
+nav a { margin-left: 18px; color: var(--muted); text-decoration: none; font-size: 15px; }
+nav a:hover { color: var(--text); }
+.hero { text-align: center; padding: 36px 0 12px; }
+.hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.1; margin: 0 0 14px; letter-spacing: -.02em; }
+.hero h1 em { font-style: normal; color: var(--accent); }
+.hero p.lead { max-width: 680px; margin: 0 auto 26px; color: var(--muted); font-size: 1.1rem; }
+.btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.btn {
+  display: inline-block; padding: 13px 24px; border-radius: 10px; font-weight: 650; text-decoration: none;
+  border: 1px solid var(--line); color: var(--text); background: var(--panel);
+}
+.btn:hover { border-color: var(--accent); color: var(--text); }
+.btn.primary { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+.btn.primary:hover { background: var(--accent-2); border-color: var(--accent-2); color: var(--on-accent); }
+.meta { color: var(--muted); font-size: 14px; margin-top: 12px; }
+.shot { margin: 34px auto 0; border-radius: 14px; overflow: hidden; border: 1px solid var(--line);
+  box-shadow: 0 20px 70px rgba(0,0,0,.55); }
+.shot img, .shot video { display: block; width: 100%; height: auto; background: #000; }
+.caption { color: var(--muted); font-size: 14px; text-align: center; margin: 10px 0 0; }
+section { padding: 56px 0 8px; }
+h2 { font-size: 1.7rem; margin: 0 0 8px; letter-spacing: -.01em; }
+h2 + p.sub { color: var(--muted); margin: 0 0 26px; }
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+.card h3 { margin: 0 0 6px; font-size: 1.05rem; color: var(--accent); }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+.card img { display: block; width: 100%; height: auto; border-radius: 8px; margin: 0 0 12px; background: #000; }
+ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 0; display: grid; gap: 14px; }
+ol.steps li { counter-increment: s; background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+  padding: 16px 20px 16px 62px; position: relative; }
+ol.steps li::before {
+  content: counter(s); position: absolute; left: 18px; top: 14px; width: 30px; height: 30px; border-radius: 50%;
+  background: var(--accent); color: var(--on-accent); font-weight: 800; display: grid; place-items: center;
+}
+ol.steps strong { color: var(--text); }
+ol.steps p { margin: 4px 0 0; color: var(--muted); font-size: 15px; }
+kbd, code { background: rgba(255,255,255,.07); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px;
+  font: 0.92em ui-monospace, Consolas, monospace; color: var(--text); }
+pre { background: #02050a; border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; overflow-x: auto; }
+pre code { border: 0; background: none; padding: 0; }
+details { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; margin-top: 14px; }
+details summary { cursor: pointer; font-weight: 600; }
+details p, details ul { color: var(--muted); font-size: 15px; }
+.note { border-left: 3px solid var(--accent); padding: 10px 16px; background: rgba(255,255,255,.03); border-radius: 0 10px 10px 0;
+  color: var(--muted); font-size: 15px; margin-top: 16px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-weight: 600; width: 34%; }
+.doclist { list-style: none; padding: 0; margin: 18px 0 0; border-top: 1px solid var(--line); }
+.doclist li { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.doclist a { font-weight: 600; text-decoration: none; }
+.doclist a:hover { text-decoration: underline; }
+.doclist span { color: var(--muted); font-size: 15px; }
+p.more { margin: 16px 0 0; }
+footer { margin-top: 70px; padding: 28px 0 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+@media (max-width: 560px) { nav a.hide-sm { display: none; } .hero { padding-top: 14px; } .doclist li { grid-template-columns: minmax(0, 1fr); gap: 2px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#">Digital<span>Rain</span></a>
+    <nav>
+      <a class="hide-sm" href="#features">Features</a><a class="hide-sm" href="#install">Install</a><a href="docs.html">Docs</a><a class="hide-sm" href="https://github.com/phabzlabs/digital-rain">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Matrix-inspired<br><em>digital rain</em></h1>
+      <p class="lead">Mirrored katakana falls in glowing green columns across every monitor you own, with a bright white head, a fading trail, three layers of depth and the look of an old CRT. An unofficial, Matrix-inspired fan project.</p>
+      <div class="btns">
+        <a class="btn primary" href="https://github.com/phabzlabs/digital-rain/releases/latest/download/DigitalRain-Setup.exe">Download for Windows</a>
+        <a class="btn" href="https://github.com/phabzlabs/digital-rain/releases/latest/download/DigitalRain.dmg">Download for Mac</a>
+        <a class="btn" href="#install">How to install</a>
+        <a class="btn" href="https://github.com/phabzlabs/digital-rain">View on GitHub</a>
+      </div>
+      <p class="meta">Free · Windows 10/11 or macOS · <a href="#source">build it from source</a> · <a href="https://github.com/phabzlabs/digital-rain/releases">all versions</a></p>
+      <div class="shot">
+        <video id="demo" autoplay muted loop playsinline preload="auto" poster="screenshot.png" width="960" height="406" aria-label="Digital rain in the default look, The Matrix (1999)">
+          <source src="demo.webm" type="video/webm">
+          <source src="demo.mp4" type="video/mp4">
+          <img src="screenshot.png" alt="Digital rain in the default look, The Matrix (1999), on an ultrawide monitor" width="2000" height="744">
+        </video>
+      </div>
+      <p class="caption">The default look, The Matrix (1999). Every monitor runs its own rain.</p>
+    </div>
+
+    <section id="features">
+      <h2>What you get</h2>
+      <p class="sub">Built with Python and OpenGL.</p>
+      <div class="grid">
+        <div class="card"><h3>Multi-monitor and DPI-aware</h3><p>Every display runs its own rain, fitted to its size, position and scaling. Plug or unplug a screen while it runs.</p></div>
+        <div class="card"><h3>The film&#x27;s look</h3><p>The film&#x27;s 57 glyphs (mirrored blocky katakana, digits and symbols), a near-white head, a fading green trail and glyphs that mutate.</p></div>
+        <div class="card"><h3>Three film looks</h3><p>The Matrix (1999), Reloaded (2003) and Resurrections (2021), measured against film stills, or Custom to tune every effect yourself.</p></div>
+        <div class="card"><h3>Depth and glow</h3><p>Three parallax layers (a dim far one, a middle one and a big out-of-focus near one) with bloom.</p></div>
+        <div class="card"><h3>CRT feel</h3><p>Scanlines with animated interlacing, a vignette and a subtle flicker.</p></div>
+        <div class="card"><h3>Wake up, Neo…</h3><p>Now and then a message from the film types itself out over the rain. The rain can also spell out the time or your own text.</p></div>
+        <div class="card"><h3>Pictures in the rain</h3><p>Point it at a folder of pictures and the rain forms them one after another.</p></div>
+        <div class="card"><h3>Tunable</h3><p>Runs on the GPU with an automatic software fallback. A settings window with a live preview sets the look per monitor.</p></div>
+      </div>
+    </section>
+
+    <section id="looks">
+      <h2>The film looks</h2>
+      <p class="sub">Each look is measured against stills from its film. Captured from the screensaver itself.</p>
+      <div class="grid">
+        <div class="card"><img src="look-film_1999.png" alt="The Matrix (1999) look" width="800" height="450" loading="lazy"><h3>The Matrix (1999)</h3><p>The default look.</p></div>
+        <div class="card"><img src="look-reloaded.png" alt="Reloaded (2003) look" width="800" height="450" loading="lazy"><h3>Reloaded (2003)</h3><p>Brighter, denser mint-green rain.</p></div>
+        <div class="card"><img src="look-resurrections.png" alt="Resurrections (2021) look" width="800" height="450" loading="lazy"><h3>Resurrections (2021)</h3><p>The newer glyphs, softer and deeper.</p></div>
+        <div class="card"><img src="message.png" alt="The text Wake up, Neo... forming out of rain glyphs, Film 1999 look" width="1200" height="360" loading="lazy"><h3>Message in the rain</h3><p>Your own text or the time, formed out of the rain. Set Message to Your text to see it.</p></div>
+        <div class="card"><img src="picture.png" alt="A cat portrait formed by the rain" width="1600" height="595" loading="lazy"><h3>Picture in the rain</h3><p>A cat portrait formed by the rain (photo: Anton Petrov, CC0).</p></div>
+      </div>
+    </section>
+
+    <section id="install">
+      <h2>Download and install</h2>
+      <p class="sub">It takes about a minute. No account.</p>
+      <ol class="steps">
+        <li><strong>Download and run <code>DigitalRain-Setup.exe</code></strong>
+          <p>Click the button above, or grab it from the <a href="https://github.com/phabzlabs/digital-rain/releases/latest">latest release</a> page (the file is under <em>Assets</em>). It installs for your user only, so it needs no administrator rights.</p></li>
+        <li><strong>Leave <kbd>Set Digital Rain as my screensaver</kbd> ticked and click <kbd>Finish</kbd></strong>
+          <p>Windows opens the <em>Screen Saver Settings</em> window with Digital Rain already selected.</p></li>
+        <li><strong>Click <kbd>Apply</kbd> and <kbd>OK</kbd></strong>
+          <p>Set how many minutes of inactivity you want in <em>Wait</em>. Use <kbd>Preview</kbd> to try it right away; a key press, a click or moving the mouse ends it.</p></li>
+        <li><strong>Optional: click <kbd>Settings…</kbd> to tune it</strong>
+          <p>Pick a film look, or Custom with six colours (Film green, Bright green, Amber, Red, Blue, White), then fall speed, rain density, character size, a message or clock, pictures and more. You can also point it at a custom font.</p></li>
+      </ol>
+
+      <div class="note"><strong>Windows says "protected your PC"?</strong> The installer is not code-signed (that needs a paid certificate), so SmartScreen or your antivirus may warn about it, as it does with many small tools. Click <kbd>More info</kbd> → <kbd>Run anyway</kbd>. You can read every line of the source on GitHub and build it yourself.</div>
+
+      <details>
+        <summary>On a Mac</summary>
+        <p>Download <code>DigitalRain.dmg</code> from the same release, open it and double-click <code>Digital Rain.saver</code>. It is not notarised, so if macOS blocks it, open <em>System Settings → Privacy &amp; Security</em> and click <kbd>Open Anyway</kbd>, or run <code>xattr -dr com.apple.quarantine "Digital Rain.saver"</code> first. To update, install the saver from a newer dmg the same way, then log out and back in. To remove it, delete it from <code>~/Library/Screen Savers</code>.</p>
+      </details>
+      <details>
+        <summary>Check your download</summary>
+        <p>Each release has a <code>SHA256SUMS.txt</code>. Compare it with <code>Get-FileHash DigitalRain-Setup.exe</code> (Windows) or <code>shasum -a 256 DigitalRain.dmg</code> (Mac). The files also carry build provenance attestations: <code>gh attestation verify DigitalRain-Setup.exe -R phabzlabs/digital-rain</code>.</p>
+      </details>
+      <details>
+        <summary>Can't find the Screen Saver Settings window?</summary>
+        <p>Press the Windows key and type <code>screen saver</code>, then open <em>Change screen saver</em>. On Windows 11 it is also under <em>Settings → Personalization → Lock screen → Screen saver</em>. Pick <em>Digital Rain</em> from the drop-down list.</p>
+      </details>
+      <details id="source">
+        <summary>Run it from source instead</summary>
+        <pre><code>git clone https://github.com/phabzlabs/digital-rain.git
+cd digital-rain
+python -m pip install -r requirements/requirements.txt
+python matrix_saver.py /s</code></pre>
+        <p>Needs Python 3.14 on Windows. To build your own <code>DigitalRain-Setup.exe</code> run <code>.\build.ps1</code> (see the README).</p>
+      </details>
+      <details>
+        <summary>Uninstall</summary>
+        <p>Open <em>Settings → Apps → Installed apps</em>, find <em>Digital Rain</em> and choose <em>Uninstall</em>. If Digital Rain was your screen saver, pick another one (or <em>None</em>) in the screen saver window. Your settings are in <code>%APPDATA%\MatrixRain</code>; delete that folder to reset them.</p>
+      </details>
+      <p class="more">Updating, checking the download, multiple monitors and troubleshooting are covered in <a href="installing-and-uninstalling.html">Installing and uninstalling</a>.</p>
+    </section>
+
+    <section id="docs">
+      <h2>Documentation</h2>
+      <ul class="doclist">
+        <li><a href="features.html">Features</a><span>What the screensaver does, and why each part is there.</span></li>
+        <li><a href="settings-reference.html">Settings reference</a><span>Every setting, the values it takes and its default.</span></li>
+        <li><a href="installing-and-uninstalling.html">Installing and uninstalling</a><span>Full install steps and troubleshooting.</span></li>
+        <li><a href="macos.html">macOS</a><span>The Mac saver: install, build and open points.</span></li>
+      </ul>
+      <p class="more"><a href="docs.html">All documentation</a>, including the pages for contributors.</p>
+    </section>
+
+    <section id="requirements">
+      <h2>Requirements</h2>
+      <table>
+        <tr><th>System</th><td>Windows 10 or 11, or macOS 12 or later. Each release carries <code>DigitalRain.dmg</code> for the Mac.</td></tr>
+        <tr><th>Graphics</th><td>Any GPU with OpenGL 3.3 or newer. Without it, a slower software renderer takes over automatically.</td></tr>
+        <tr><th>Fonts</th><td>The film font is bundled. If it is missing, the <em>MS Gothic</em> and <em>Courier New</em> fonts that ship with Windows stand in.</td></tr>
+      </table>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>Made by <a href="https://github.com/phabzlabs">phabzlabs</a>, based on <a href="https://github.com/madkoding/matrix-screensaver">madkoding's original</a> · <a href="docs.html">documentation</a> · <a href="https://github.com/phabzlabs/digital-rain">source code</a> · <a href="https://github.com/phabzlabs/digital-rain/issues">report a problem</a> · <a href="https://github.com/phabzlabs/digital-rain/blob/main/LICENSE">GPL-3.0 license</a></span>
+    <span>Digital Rain is an unofficial, Matrix-inspired fan project, not affiliated with or endorsed by Warner Bros.</span>
+    <span>Optional upscaling based on <a href="https://github.com/GPUOpen-Effects/FidelityFX-FSR">AMD FidelityFX Super Resolution 1.0</a> (MIT).</span>
+  </div>
+</footer>
+<script>
+/* Hero clip: a looping muted video. If the browser blocks autoplay, can't decode it, or
+   it simply doesn't start, swap in the animated GIF so there is always motion.
+   "Reduce motion" is respected: show the still poster with controls instead. */
+(function () {
+  var v = document.getElementById('demo');
+  if (!v) return;
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) { v.removeAttribute('autoplay'); v.pause(); v.controls = true; return; }
+  var swapped = false;
+  function useGif() {
+    if (swapped) return;
+    swapped = true;
+    var img = new Image();
+    img.src = 'demo.gif';
+    img.alt = v.getAttribute('aria-label') || '';
+    img.width = 960; img.height = 406;
+    v.parentNode.replaceChild(img, v);
+  }
+  v.addEventListener('error', useGif, true);          /* a <source> failed to load or decode */
+  var p = v.play && v.play();
+  if (p && p.catch) p.catch(useGif);                  /* autoplay blocked */
+  function watchdog() {                              /* silently paused (battery saver etc.) */
+    if (swapped) return;
+    if (document.hidden) {                           /* background tabs pause video: wait until visible */
+      document.addEventListener('visibilitychange', function once() {
+        if (document.hidden) return;
+        document.removeEventListener('visibilitychange', once);
+        setTimeout(watchdog, 2500);
+      });
+      return;
+    }
+    if (v.paused || v.currentTime < 0.05) useGif();
+  }
+  setTimeout(watchdog, 3000);
+})();
+</script>
+<noscript><style>#demo { display: none; }</style><div class="shot"><img src="demo.gif" alt="Digital rain in the default look, The Matrix (1999)" width="480" height="202"></div></noscript>
+</body>
+</html>

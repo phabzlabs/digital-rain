@@ -1,0 +1,121 @@
+{
+  "_about": "The 2021 digital rain (design/film-reference-resurrections.md): Rezmason's Resurrections glyphs on square cells, a green floor, warm lime-white leaders, soft skirt, three depth layers with their own densities.",
+  "speed": [15.0, 30.0],
+  "tooth": 75.0,
+  "contrast": 0.8424,
+  "bias": 0.0,
+  "flat": -1.0,
+  "lead_ratio": 0.1,
+  "cursor": [210, 240, 204],
+  "cursor_gain": 1.0,
+  "palette": [
+    [0, "030F03"],
+    [60, "0F3914"],
+    [100, "2B6031"],
+    [140, "4D884D"],
+    [180, "71AF6A"],
+    [215, "9ED590"],
+    [242.5, "C7F3B5"],
+    [255, "E8FBE8"]
+  ],
+  "cycle": [0.56, 0, 0.0],
+  "cell_scale": 1.0,
+  "bloom": 0.6,
+  "hipass": 0.0,
+  "grain": 0.0167,
+  "toe": 0.2,
+  "vignette": 0.15,
+  "scanlines": 0.0,
+  "interlace": false,
+  "flicker": 0.0,
+  "step_fps": 0.0,
+  "gamma": 4.0,
+  "crossfade": false,
+  "defocus": 0.12,
+  "pyramid": true,
+  "glow_r": [1.5, 0.9, 0.25, 0.12],
+  "glow_g": [1.5, 1.5, 0.6, 0.5],
+  "grain_ink": 0.04,
+  "lanes": 1.43,
+  "lead_core": 1.5,
+  "glyph_set": "resurrections",
+  "columns": 70,
+  "glint_gain": 0.12,
+  "layers": [
+    {
+      "scale": 0.62,
+      "dim": 0.5,
+      "speed": 0.9,
+      "density": 0.8,
+      "trail": 1.2,
+      "soft": 0.0
+    },
+    {
+      "scale": 1.0,
+      "dim": 1.0,
+      "speed": 1.0,
+      "density": 0.9,
+      "trail": 1.0,
+      "soft": 0.0
+    },
+    {
+      "scale": 1.75,
+      "dim": 0.7,
+      "speed": 0.9,
+      "density": 0.2,
+      "trail": 0.5,
+      "soft": 0.15
+    }
+  ],
+  "depth_jitter": 0.3,
+  "depth_slices": [
+    {
+      "scale": 0.71,
+      "dim": 0.6,
+      "speed": 0.95,
+      "density": 0.6,
+      "trail": 1.1,
+      "soft": 0.0
+    },
+    {
+      "scale": 1.0,
+      "dim": 1.0,
+      "speed": 1.0,
+      "density": 0.9,
+      "trail": 1.0,
+      "soft": 0.0
+    },
+    {
+      "scale": 1.41,
+      "dim": 0.7,
+      "speed": 0.95,
+      "density": 0.15,
+      "trail": 0.8,
+      "soft": 0.0
+    },
+    {
+      "scale": 2.0,
+      "dim": 0.65,
+      "speed": 0.9,
+      "density": 0.1,
+      "trail": 0.6,
+      "soft": 0.05
+    },
+    {
+      "scale": 2.83,
+      "dim": 0.6,
+      "speed": 0.9,
+      "density": 0.07,
+      "trail": 0.5,
+      "soft": 0.1
+    },
+    {
+      "scale": 4.0,
+      "dim": 0.55,
+      "speed": 0.85,
+      "density": 0.04,
+      "trail": 0.4,
+      "soft": 0.1
+    }
+  ]
+}

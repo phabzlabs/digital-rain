@@ -1,0 +1,16 @@
+{
+  "color": "amber",
+  "bloom": 0.8,
+  "scanlines": 0.1,
+  "interlace": false,
+  "vignette": 0.2,
+  "flicker": 0.0,
+  "speed": 1.5,
+  "density": 0.7,
+  "glyph_scale": 1.2,
+  "trail_falloff": 2.0,
+  "depth": false,
+  "easter_egg": false,
+  "renderer": "software",
+  "font_path": ""
+}

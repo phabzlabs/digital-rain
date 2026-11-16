@@ -1,0 +1,7 @@
+Digital Rain is free software, released under the GNU General Public License v3.0.
+
+You can use it, share it and change it. You do not need to accept anything to install or run it.
+
+The full licence (LICENSE.txt) and the licences of the parts it bundles (THIRD_PARTY_NOTICES.md) are installed with it, in its program folder.
+
+Digital Rain is a Matrix-inspired fan project. It is not affiliated with or endorsed by Warner Bros.

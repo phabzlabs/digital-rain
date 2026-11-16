@@ -1,0 +1,29 @@
+/build/
+/dist/
+*.spec
+*.scr
+__pycache__/
+shot.png
+crop.png
+capture.png
+.venv/
+*.png.tmp
+MatrixRain.zip
+DigitalRain-Setup.exe
+DigitalRain.dmg
+mac-host-results/
+mac-build-results/
+MatrixRain-mac.zip
+# local experiment output (renders, comparisons), never committed
+artefacts/
+
+# local research and reference material, never committed
+research/
+film-reference-stills/
+matrix-screensaver/
+
+# film stills and fan GIFs: third-party material, kept locally for the film checks, never committed
+assets/reference/
+
+# documentation site built by tools/build/build_docs.py, never committed
+_site/

@@ -1,0 +1,10 @@
+# What tools/build/build_mac.sh installs to build MatrixRain.saver with py2app
+# (python.org Python 3.14 like the Windows build; first proven on 3.15, macOS 27.2, Apple Silicon: re-prove): the saver's runtime
+# packages plus py2app and its dependencies, all pinned.
+-r requirements-mac.txt
+altgraph==0.17.5
+macholib==1.16.4
+modulegraph==0.19.7
+packaging==26.3
+py2app==0.28.10
+setuptools==84.2.1

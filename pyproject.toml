@@ -1,0 +1,48 @@
+[project]
+name = "digital-rain"
+# Must match ProductVersion in version_info.txt, which the builds read (tests/test_version.py).
+version = "1.0.0"
+description = "Digital Rain, a Matrix-inspired, GPU-rendered, multi-monitor screensaver for Windows and macOS."
+readme = "README.md"
+requires-python = ">=3.14"
+license = { file = "LICENSE" }
+authors = [{ name = "madkoding and phabzlabs contributors" }]
+# Run-time packages are pinned in requirements/requirements.txt (Windows) and requirements/requirements-mac.txt (macOS).
+# The screensaver is built with build.ps1 and tools/build/build_mac.sh, not installed with pip.
+dependencies = []
+
+[project.urls]
+Homepage = "https://phabzlabs.github.io/digital-rain/"
+Source = "https://github.com/phabzlabs/digital-rain"
+Documentation = "https://phabzlabs.github.io/digital-rain/docs.html"
+Issues = "https://github.com/phabzlabs/digital-rain/issues"
+Changelog = "https://github.com/phabzlabs/digital-rain/blob/main/CHANGELOG.md"
+
+[tool.ruff]
+line-length = 100
+target-version = "py314"
+extend-exclude = [".claude", "build", "dist", "docs"]
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "B", "N", "SIM", "I"]
+
+[tool.ruff.lint.per-file-ignores]
+# Objective-C selector names (controlChanged_, applicationDidFinishLaunching_, ...).
+"digital_rain/mac/*.py" = ["N802"]
+"digital_rain/osapi/mac.py" = ["N802"]
+"tools/checks/fake_appkit.py" = ["N802"]
+"tools/checks/check_mac_options.py" = ["N802"]
+# Local names that are Python modules imported on first use (objc, AppKit, Foundation), so
+# they keep the module's own spelling.
+"digital_rain/mac/mac_options.py" = ["N806"]
+# The checks and tests put the repository root on sys.path before importing project modules.
+"tools/**/*.py" = ["E402"]
+"tests/*.py" = ["E402"]
+
+[tool.ruff.format]
+quote-style = "preserve"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["."]
