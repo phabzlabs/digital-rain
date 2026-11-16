@@ -60,7 +60,7 @@ dl.spec dt { color: var(--faint); font-size: 14.5px; }
 dl.spec dd { margin: 0; font-size: 15px; }
 
 section { padding: 104px 0 0; }
-#looks { padding-top: 128px; }
+#films { padding-top: 128px; }
 #docs { padding-top: 88px; }
 h2 { font-stretch: 118%; font-weight: 750; font-size: 2rem; line-height: 1.1; letter-spacing: -.02em; margin: 0 0 14px; }
 .sub { color: var(--muted); max-width: 40em; margin: 0 0 30px; }
@@ -73,7 +73,6 @@ h2 { font-stretch: 118%; font-weight: 750; font-size: 2rem; line-height: 1.1; le
 .look figure img { display: block; width: 100%; height: auto; background: #000; }
 .facts { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
 .facts li { padding: 11px 0; border-bottom: 1px solid var(--rule); font-size: 15.5px; color: #c9d3ce; }
-.facts strong { display: block; font-weight: 650; color: var(--text); }
 .swatch { display: inline-block; width: 11px; height: 11px; margin-right: 7px; vertical-align: -1px; }
 .facts + p { font-size: 15px; margin: 18px 0 0; }
 
@@ -91,10 +90,8 @@ h2 { font-stretch: 118%; font-weight: 750; font-size: 2rem; line-height: 1.1; le
 ol.steps { margin: 0; padding-left: 1.3em; }
 ol.steps li { padding: 0 0 16px 6px; color: #c9d3ce; }
 ol.steps li::marker { color: var(--faint); font-weight: 600; }
-ol.steps b { color: var(--text); font-weight: 650; }
 kbd, code { font: .9em ui-monospace, "Cascadia Mono", Consolas, monospace; background: var(--bg-2); padding: 1px 5px; border-radius: 2px; color: var(--text); }
 .warn { margin: 8px 0 0; padding: 16px 0 0; border-top: 1px solid var(--rule); font-size: 15.5px; color: #c9d3ce; }
-.warn b { color: var(--text); }
 .other h3 { font-size: 1rem; font-weight: 650; color: var(--muted); margin: 0 0 6px; }
 .other details { border-bottom: 1px solid var(--rule); }
 .other details:first-of-type { border-top: 1px solid var(--rule); }
@@ -136,7 +133,7 @@ footer .links { display: flex; flex-wrap: wrap; gap: 6px 22px; }
   <header class="top">
     <a class="mark" href="./">Digital Rain</a>
     <nav class="site" aria-label="Site">
-      <a class="hide-sm" href="#looks">Looks</a>
+      <a class="hide-sm" href="#films">Films</a>
       <a class="hide-sm" href="#install">Install</a>
       <a href="docs.html">Docs</a>
       <a href="https://github.com/phabzlabs/digital-rain">GitHub</a>
@@ -184,8 +181,8 @@ footer .links { display: flex; flex-wrap: wrap; gap: 6px 22px; }
       </dl>
     </div>
 
-    <section id="looks" aria-labelledby="looks-h">
-      <h2 id="looks-h">Three films, measured</h2>
+    <section id="films" aria-labelledby="films-h">
+      <h2 id="films-h">The three film looks</h2>
       <p class="sub">There is no official specification of the rain, so each look is tuned against numbers taken from film frames: colour, brightness, glyph shapes and spacing.</p>
       <div class="tabs" role="tablist" aria-label="Film looks">
         <button role="tab" id="t1999" aria-selected="true" aria-controls="p1999">The Matrix (1999)</button>
@@ -196,10 +193,10 @@ footer .links { display: flex; flex-wrap: wrap; gap: 6px 22px; }
         <figure><img src="look-film_1999.png" alt="The Matrix (1999) look" width="800" height="450" loading="lazy"></figure>
         <div>
           <ul class="facts">
-            <li><strong><span class="swatch" style="background: #28f5a0" aria-hidden="true"></span>Blue-green, not yellow-green</strong>Lit pixels measure hue 152 to 154° on the Blu-ray still.</li>
-            <li><strong>The film's own 57 glyphs</strong>Blocky katakana, digits and symbols, with the film's selective mirroring.</li>
-            <li><strong>Light moves one cell at a time</strong>Stepped at 24 frames per second, with near-white leaders.</li>
-            <li><strong>Grain, not scanlines</strong>The film shows no CRT lines, so this look turns them off.</li>
+            <li><span class="swatch" style="background: #28f5a0" aria-hidden="true"></span>The green leans blue. Lit pixels measure hue 152 to 154° on the Blu-ray still.</li>
+            <li>It uses the film's 57 glyphs, blocky katakana, digits and symbols, mirrored the way the film mirrors them.</li>
+            <li>Light moves down one cell at a time at 24 frames per second, led by near-white heads.</li>
+            <li>The film shows grain and no CRT lines, so this look turns scanlines off.</li>
           </ul>
           <p><a href="film-research.html">Read the film research</a></p>
         </div>
@@ -208,9 +205,9 @@ footer .links { display: flex; flex-wrap: wrap; gap: 6px 22px; }
         <figure><img src="look-reloaded.png" alt="Reloaded (2003) look" width="800" height="450" loading="lazy"></figure>
         <div>
           <ul class="facts">
-            <li><strong><span class="swatch" style="background: #25fca8" aria-hidden="true"></span>Mint heads, no white leaders</strong>Lit hue is 147 to 157° in all 13 stills from the 4K regrade.</li>
-            <li><strong>Denser and brighter</strong>About 27 to 32% of the frame is lit, with a heavy bright band.</li>
-            <li><strong>Soft glyph edges</strong>The same 57 glyphs as 1999, on a slightly smaller cell.</li>
+            <li><span class="swatch" style="background: #25fca8" aria-hidden="true"></span>Heads are mint green with no white leaders. Lit hue is 147 to 157° in all 13 stills from the 4K regrade.</li>
+            <li>About 27 to 32% of the frame is lit, with a heavy band of bright tones.</li>
+            <li>The 57 glyphs from 1999 have softer edges and sit on a slightly smaller cell.</li>
           </ul>
           <p><a href="film-research.html">Read the film research</a></p>
         </div>
@@ -219,9 +216,9 @@ footer .links { display: flex; flex-wrap: wrap; gap: 6px 22px; }
         <figure><img src="look-resurrections.png" alt="Resurrections (2021) look" width="800" height="450" loading="lazy"></figure>
         <div>
           <ul class="facts">
-            <li><strong><span class="swatch" style="background: #e8fbe8" aria-hidden="true"></span>A green floor, not black</strong>The background sits at about <code>#030F03</code>, with sparse pale lime leaders.</li>
-            <li><strong>135 newer glyphs on square cells</strong>Seventy columns across the long side of the screen.</li>
-            <li><strong>Stacked depth</strong>Three layers, because the stills show near facades 1.6 to 1.8 times the size of far ones.</li>
+            <li><span class="swatch" style="background: #e8fbe8" aria-hidden="true"></span>The background is a dark green of about <code>#030F03</code>, with sparse pale lime leaders.</li>
+            <li>It uses 135 newer glyphs on square cells, 70 columns across the long side of the screen.</li>
+            <li>The rain falls in three layers of depth, because near facades in the stills are 1.6 to 1.8 times the size of far ones.</li>
           </ul>
           <p><a href="film-research.html">Read the film research</a></p>
         </div>
@@ -232,13 +229,13 @@ footer .links { display: flex; flex-wrap: wrap; gap: 6px 22px; }
       <div class="features">
         <div class="side">
           <h2 id="features-h">What it does</h2>
-          <p class="sub">Beyond the three film looks. A Custom look adds colours, scanlines and the rest of the CRT effects if you want them.</p>
+          <p class="sub">A Custom look adds colours, scanlines and the other CRT effects if you want them.</p>
           <p><a href="features.html">All features</a></p>
         </div>
         <div>
           <div class="item">
             <h3>Every monitor runs its own rain</h3>
-            <p>Each display gets rain fitted to its size, position and Windows scaling. Plug or unplug one while it runs. One monitor can even use a different look from the others.</p>
+            <p>Each display gets rain fitted to its size, position and Windows scaling. Plug or unplug one while it runs. One monitor can use a different look from the others.</p>
           </div>
           <div class="item">
             <h3>The time, or your own words, in the rain</h3>
@@ -247,12 +244,12 @@ footer .links { display: flex; flex-wrap: wrap; gap: 6px 22px; }
           </div>
           <div class="item">
             <h3>Pictures drawn in rain</h3>
-            <p>Point it at a folder of photos and the rain forms them one after another. A depth model keeps faces, corridors and floors in perspective.</p>
+            <p>Point it at a folder of photos and the rain forms them one after another. A depth model keeps each picture in perspective.</p>
             <figure><img src="picture.png" alt="A cat portrait formed by the rain" width="1600" height="595" loading="lazy"><figcaption>A cat portrait (photo: Anton Petrov, CC0).</figcaption></figure>
           </div>
           <div class="item">
-            <h3>It reacts to your computer</h3>
-            <p>Optionally, the rain speeds up or thickens as your processor or graphics card gets busier.</p>
+            <h3>Rain that follows your computer's load</h3>
+            <p>If you turn it on, the rain speeds up or thickens as your processor or graphics card gets busier.</p>
           </div>
           <div class="item">
             <h3>Settings with a live preview</h3>
@@ -265,16 +262,16 @@ footer .links { display: flex; flex-wrap: wrap; gap: 6px 22px; }
 
     <section id="install" aria-labelledby="install-h">
       <h2 id="install-h">Install</h2>
-      <p class="sub">About a minute on Windows. No account, and no administrator rights.</p>
+      <p class="sub">On Windows you need no account and no administrator rights.</p>
       <div class="install">
         <div>
           <ol class="steps">
-            <li><b>Download and run <code>DigitalRain-Setup.exe</code></b> from the <a href="https://github.com/phabzlabs/digital-rain/releases/latest">latest release</a>, under Assets. It installs for your user only.</li>
-            <li><b>Leave <kbd>Set Digital Rain as my screensaver</kbd> ticked</b> and click <kbd>Finish</kbd>. The Screen Saver Settings window opens with Digital Rain selected.</li>
-            <li><b>Choose how long Windows waits,</b> then click <kbd>Apply</kbd> and <kbd>OK</kbd>. <kbd>Preview</kbd> runs it now; any key, click or mouse movement ends it.</li>
-            <li><b>Click <kbd>Settings…</kbd> to change the look,</b> if you want to.</li>
+            <li>Download and run <code>DigitalRain-Setup.exe</code> from the <a href="https://github.com/phabzlabs/digital-rain/releases/latest">latest release</a>, under Assets. It installs for your user only.</li>
+            <li>Leave <kbd>Set Digital Rain as my screensaver</kbd> ticked and click <kbd>Finish</kbd>. The Screen Saver Settings window opens with Digital Rain selected.</li>
+            <li>Choose how long Windows waits, then click <kbd>Apply</kbd> and <kbd>OK</kbd>. <kbd>Preview</kbd> runs it now; any key, click or mouse movement ends it.</li>
+            <li>To change the look, click <kbd>Settings…</kbd>.</li>
           </ol>
-          <p class="warn"><b>Windows says it protected your PC?</b> The installer isn't code-signed, because that needs a paid certificate. Click <kbd>More info</kbd>, then <kbd>Run anyway</kbd>. The source is on GitHub if you'd rather build it yourself.</p>
+          <p class="warn">If Windows says it protected your PC, click <kbd>More info</kbd>, then <kbd>Run anyway</kbd>. The installer isn't code-signed, because that needs a paid certificate. The source is on GitHub if you'd rather build it yourself.</p>
         </div>
         <div class="other">
           <h3>Other ways</h3>

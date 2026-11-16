@@ -14,16 +14,16 @@ Digital Rain is a free screensaver that recreates the falling code of The Matrix
 > [!NOTE]
 > The installer isn't code-signed and the Mac saver isn't notarised, so Windows or macOS may ask you to allow them. [Install](#install) says how.
 
-In the screensaver picker it is listed as Digital Rain. The files and the settings folder keep the older name, `MatrixRain`. The website, with the full documentation, is at **[phabzlabs.github.io/digital-rain](https://phabzlabs.github.io/digital-rain/)**.
+In the screensaver picker it is listed as Digital Rain. The files and the settings folder keep the older name, `MatrixRain`. The website, with the full documentation, is at [phabzlabs.github.io/digital-rain](https://phabzlabs.github.io/digital-rain/).
 
-## Three films, measured
+## The three film looks
 
 There is no official specification of the rain, so each look is tuned against numbers taken from film frames: colour, brightness, glyph shapes and spacing. A Custom look adds colours, scanlines and other CRT effects if you want them.
 
 | The Matrix (1999) | Reloaded (2003) | Resurrections (2021) |
 |---|---|---|
 | ![The Matrix (1999) look](docs/look-film_1999.png) | ![Reloaded (2003) look](docs/look-reloaded.png) | ![Resurrections (2021) look](docs/look-resurrections.png) |
-| Blue-green, measured at hue 152 to 154°. The film's own 57 glyphs, stepped one cell at a time at 24 frames per second. | Mint heads with no white leaders. Denser and brighter, with about 27 to 32% of the frame lit. | A green floor instead of black, and 135 newer glyphs on square cells, in three layers of depth. |
+| The green leans blue, at hue 152 to 154°. The film's 57 glyphs light up one cell at a time at 24 frames per second. | Heads are mint green with no white leaders, and about 27 to 32% of the frame is lit. | The background is dark green, and 135 newer glyphs sit on square cells in three layers of depth. |
 
 The measurements, their sources and their limits are in [Film research](https://phabzlabs.github.io/digital-rain/film-research.html).
 
@@ -32,11 +32,11 @@ The measurements, their sources and their limits are in [Film research](https://
 <table>
 <tr>
 <td width="55%"><img src="docs/message.png" alt="The text Wake up, Neo... forming out of rain glyphs"></td>
-<td><b>Your words in the rain.</b> The rain can spell out the time or up to 24 characters of your own text. Now and then, lines from the film type themselves over it.</td>
+<td>The rain can spell out the time or up to 24 characters of your own text. Now and then, lines from the film type themselves over it.</td>
 </tr>
 <tr>
 <td width="55%"><img src="docs/picture.png" alt="A cat portrait formed by the rain"></td>
-<td><b>Pictures drawn in rain.</b> Point it at a folder of photos and the rain forms them one after another, with a depth model keeping them in perspective. Photo: Anton Petrov, CC0.</td>
+<td>Point it at a folder of photos and the rain forms them one after another, with a depth model keeping them in perspective. Photo: Anton Petrov, CC0.</td>
 </tr>
 </table>
 
