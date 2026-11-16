@@ -4,7 +4,7 @@ How to set up the project, run it, check it and propose a change. The repository
 
 ## Set up
 
-You need Windows and Python 3.14. The code uses Python 3.14 syntax, for example `except OSError, ValueError:` without parentheses, so an older interpreter fails on import.
+You need Windows and Python 3.14. The code uses Python 3.14 syntax, for example `except OSError, ValueError:` without parentheses, so an older interpreter fails on import. To build and run the Mac saver on a Mac, see [[macOS]].
 
 ```powershell
 git clone https://github.com/phabzlabs/digital-rain.git
