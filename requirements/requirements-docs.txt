@@ -1,5 +1,5 @@
 # Documentation site build (tools/build_docs.py). Exact pins, like the other requirements files.
 markdown==3.11.1
 beautifulsoup4==4.15.0
-soupsieve==3.0.3
+soupsieve==4.0
 typing-extensions==4.16.0
