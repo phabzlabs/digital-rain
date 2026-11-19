@@ -38,7 +38,7 @@ Distances are scaled to a 1915 pixel wide frame. Each finding records how many s
 
 ### The Matrix (1999)
 
-Full document: [film-reference.md](https://github.com/phabzlabs/digital-rain/blob/main/design/film-reference.md), with 25 numbered findings.
+Full document: [film-reference.md](https://github.com/phabzlabz/digital-rain/blob/main/design/film-reference.md), with 25 numbered findings.
 
 * The rain is brightness moving through glyphs that stay in place. Each cell keeps its glyph, and a drop is a wave of light down a column. Several drops share a column and never collide.
 * The glyph set has 57 entries (33 katakana, the digits except 6, a lowercase z, a blank and a few symbols). The shapes are a custom blocky face, not a stock Japanese font. Mirroring is selective: all katakana are mirrored, the digits 2, 5 and 9 are mirrored horizontally, and 3 is flipped vertically.
@@ -50,7 +50,7 @@ Full document: [film-reference.md](https://github.com/phabzlabs/digital-rain/blo
 
 ### Reloaded and Revolutions (2003)
 
-Full document: [film-reference-reloaded.md](https://github.com/phabzlabs/digital-rain/blob/main/design/film-reference-reloaded.md).
+Full document: [film-reference-reloaded.md](https://github.com/phabzlabz/digital-rain/blob/main/design/film-reference-reloaded.md).
 
 * Fourteen stills were measured: 13 from the Revolutions 4K regrade and one Blu-ray-grade Reloaded still. The Blu-ray still has a different hue (125 degrees), so the preset follows the 4K grade and the document records the choice.
 * Lit hue is 147 to 157 degrees in all 13 4K stills.
@@ -61,7 +61,7 @@ Full document: [film-reference-reloaded.md](https://github.com/phabzlabs/digital
 
 ### Resurrections (2021)
 
-Full document: [film-reference-resurrections.md](https://github.com/phabzlabs/digital-rain/blob/main/design/film-reference-resurrections.md).
+Full document: [film-reference-resurrections.md](https://github.com/phabzlabz/digital-rain/blob/main/design/film-reference-resurrections.md).
 
 * The research found no Blu-ray or 4K screenshot gallery with code rain, so the stills are one film frame and trailer frames. Ten of the twelve show the same street shot, and the document says so. It records the grade of each still and keeps the lossy trailer frames for measurement only.
 * Cells are square. The 70 columns across the long side come from Rezmason's configuration, not from a measurement, and the measured pitch is close to it.
@@ -74,9 +74,9 @@ Full document: [film-reference-resurrections.md](https://github.com/phabzlabs/di
 
 Three design notes in `design/notes/` record the work on pictures that the rain draws (the In the rain mode):
 
-* [picture-in-rain-grid.md](https://github.com/phabzlabs/digital-rain/blob/main/design/notes/picture-in-rain-grid.md) explains why the picture should live in the rain's own grid. Two grids that disagreed about what is revealed, how much rain is dimmed and which glyph is on top caused visible artefacts such as cut-off glyphs and black boxes.
-* [rain-motion-in-picture.md](https://github.com/phabzlabs/digital-rain/blob/main/design/notes/rain-motion-in-picture.md) diagnoses why the rain stopped moving once a picture was shown. It lays out plans to keep the rain falling inside the picture, following perspective. A flow-field variant was built from one of those plans and rejected in favour of the existing perspective pass.
-* [picture-targets.md](https://github.com/phabzlabs/digital-rain/blob/main/design/notes/picture-targets.md) describes three reference images for judging the result side by side, not by a score alone. They show a city of dark towers with lit windows, the film's code corridor with figures at the far end and an object of fine code shaded by its own light. The images are third-party material and are not distributed.
+* [picture-in-rain-grid.md](https://github.com/phabzlabz/digital-rain/blob/main/design/notes/picture-in-rain-grid.md) explains why the picture should live in the rain's own grid. Two grids that disagreed about what is revealed, how much rain is dimmed and which glyph is on top caused visible artefacts such as cut-off glyphs and black boxes.
+* [rain-motion-in-picture.md](https://github.com/phabzlabz/digital-rain/blob/main/design/notes/rain-motion-in-picture.md) diagnoses why the rain stopped moving once a picture was shown. It lays out plans to keep the rain falling inside the picture, following perspective. A flow-field variant was built from one of those plans and rejected in favour of the existing perspective pass.
+* [picture-targets.md](https://github.com/phabzlabz/digital-rain/blob/main/design/notes/picture-targets.md) describes three reference images for judging the result side by side, not by a score alone. They show a city of dark towers with lit windows, the film's code corridor with figures at the far end and an object of fine code shaded by its own light. The images are third-party material and are not distributed.
 
 The notes share three rules: the subject is the brightest thing, the background keeps sparse rain, and streams follow the surface instead of always falling straight down. [[Design-decisions]] covers how they shaped the code.
 

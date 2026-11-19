@@ -8,7 +8,7 @@ Windows 10 or 11. `DigitalRain-Setup.exe` is mostly the depth model for pictures
 
 ## Install
 
-1. Download `DigitalRain-Setup.exe` from the [latest release](https://github.com/phabzlabs/digital-rain/releases/latest), under Assets.
+1. Download `DigitalRain-Setup.exe` from the [latest release](https://github.com/phabzlabz/digital-rain/releases/latest), under Assets.
 2. Run it. It installs for your user only, into `%LOCALAPPDATA%\Programs\MatrixRain`.
 3. When it finishes, it runs the saver once hidden (the warm-up, see below) and offers Set Digital Rain as my screensaver, ticked by default. That opens the screensaver picker with Digital Rain already selected, the same as right-click Install on `MatrixRain.scr`. Use Settings there to adjust the look, and Preview to run it full screen.
 
@@ -21,7 +21,7 @@ The screensaver runs from the install folder and `MatrixRain.scr` needs the `_in
 Each release has a `SHA256SUMS.txt` and a signed build provenance attestation for each file. Compare the hash of your download with the line in `SHA256SUMS.txt` (`Get-FileHash DigitalRain-Setup.exe` on Windows, `shasum -a 256 DigitalRain.dmg` on a Mac). To check the attestation, with the GitHub CLI:
 
 ```powershell
-gh attestation verify DigitalRain-Setup.exe -R phabzlabs/digital-rain
+gh attestation verify DigitalRain-Setup.exe -R phabzlabz/digital-rain
 ```
 
 ### Update

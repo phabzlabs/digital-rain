@@ -1,13 +1,13 @@
 # Contributing
 
-How to set up the project, run it, check it and propose a change. The repository's [CONTRIBUTING.md](https://github.com/phabzlabs/digital-rain/blob/main/CONTRIBUTING.md) is the short version of this page. For how the code is structured, see [[Architecture]], and for why, [[Design-decisions]].
+How to set up the project, run it, check it and propose a change. The repository's [CONTRIBUTING.md](https://github.com/phabzlabz/digital-rain/blob/main/CONTRIBUTING.md) is the short version of this page. For how the code is structured, see [[Architecture]], and for why, [[Design-decisions]].
 
 ## Set up
 
 You need Windows and Python 3.14. The code uses Python 3.14 syntax, for example `except OSError, ValueError:` without parentheses, so an older interpreter fails on import. To build and run the Mac saver on a Mac, see [[macOS]].
 
 ```powershell
-git clone https://github.com/phabzlabs/digital-rain.git
+git clone https://github.com/phabzlabz/digital-rain.git
 cd digital-rain
 py -3.14 -m venv .venv
 .venv\Scripts\python.exe -m pip install -r requirements/requirements-dev.txt
@@ -101,6 +101,6 @@ Habits the code follows, which a new change should keep:
 4. In the description, say what changed, why, and how you tested it. For a visual change, attach a screenshot or the output of `--shot`.
 5. If you changed a setting, a look or the install steps, update the README and the documentation pages in `wiki/` that describe it. The documentation site is built from those files, so there is no separate copy to edit. Update the project website page `docs/index.html` too if it mentions the change.
 
-Notable changes per release are listed in [CHANGELOG.md](https://github.com/phabzlabs/digital-rain/blob/main/CHANGELOG.md). Report a security problem privately, as [SECURITY.md](https://github.com/phabzlabs/digital-rain/blob/main/SECURITY.md) describes, not in a public issue. Please follow the [code of conduct](https://github.com/phabzlabs/digital-rain/blob/main/CODE_OF_CONDUCT.md).
+Notable changes per release are listed in [CHANGELOG.md](https://github.com/phabzlabz/digital-rain/blob/main/CHANGELOG.md). Report a security problem privately, as [SECURITY.md](https://github.com/phabzlabz/digital-rain/blob/main/SECURITY.md) describes, not in a public issue. Please follow the [code of conduct](https://github.com/phabzlabz/digital-rain/blob/main/CODE_OF_CONDUCT.md).
 
 The project is released under the GPL-3.0 ([[Licensing-and-credits]]), and contributions go in under the same licence.

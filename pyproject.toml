@@ -12,11 +12,11 @@ authors = [{ name = "madkoding and phabzlabs contributors" }]
 dependencies = []
 
 [project.urls]
-Homepage = "https://phabzlabs.github.io/digital-rain/"
-Source = "https://github.com/phabzlabs/digital-rain"
-Documentation = "https://phabzlabs.github.io/digital-rain/docs.html"
-Issues = "https://github.com/phabzlabs/digital-rain/issues"
-Changelog = "https://github.com/phabzlabs/digital-rain/blob/main/CHANGELOG.md"
+Homepage = "https://phabzlabz.github.io/digital-rain/"
+Source = "https://github.com/phabzlabz/digital-rain"
+Documentation = "https://phabzlabz.github.io/digital-rain/docs.html"
+Issues = "https://github.com/phabzlabz/digital-rain/issues"
+Changelog = "https://github.com/phabzlabz/digital-rain/blob/main/CHANGELOG.md"
 
 [tool.ruff]
 line-length = 100
