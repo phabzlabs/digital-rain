@@ -1,13 +1,13 @@
 # Contributing
 
-Thanks for taking an interest. This page is the short version; the [Contributing page in the documentation](https://phabzlabs.github.io/digital-rain/contributing.html) has the full developer flags, code style and the reasons behind them.
+Thanks for taking an interest. This page is the short version; the [Contributing page in the documentation](https://phabzlabz.github.io/digital-rain/contributing.html) has the full developer flags, code style and the reasons behind them.
 
 ## Set up
 
-You need Windows and Python 3.14 (the code uses 3.14 syntax, so older interpreters fail on import). macOS development is possible too; see the [macOS page](https://phabzlabs.github.io/digital-rain/macos.html).
+You need Windows and Python 3.14 (the code uses 3.14 syntax, so older interpreters fail on import). macOS development is possible too; see the [macOS page](https://phabzlabz.github.io/digital-rain/macos.html).
 
 ```powershell
-git clone https://github.com/phabzlabs/digital-rain.git
+git clone https://github.com/phabzlabz/digital-rain.git
 cd digital-rain
 py -3.14 -m venv .venv
 .venv\Scripts\python.exe -m pip install -r requirements/requirements-dev.txt

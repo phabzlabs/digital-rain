@@ -6,6 +6,6 @@ In short: be welcoming and patient, criticise ideas rather than people, accept t
 
 ## Reporting
 
-Report unacceptable behaviour by opening an issue at https://github.com/phabzlabs/digital-rain/issues, or, if it should not be public, by contacting the maintainers through their GitHub profile at https://github.com/phabzlabs. Reports are handled in confidence, and maintainers who are involved in a report step aside from handling it.
+Report unacceptable behaviour by opening an issue at https://github.com/phabzlabz/digital-rain/issues, or, if it should not be public, by contacting the maintainers through their GitHub profile at https://github.com/phabzlabz. Reports are handled in confidence, and maintainers who are involved in a report step aside from handling it.
 
 Maintainers may remove comments, commits and other contributions that break this code, and may ban contributors temporarily or permanently, following the enforcement guidelines of the Contributor Covenant.

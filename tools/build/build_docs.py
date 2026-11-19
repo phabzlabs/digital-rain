@@ -25,8 +25,8 @@ from bs4 import BeautifulSoup
 ROOT = Path(__file__).resolve().parent.parent.parent
 WIKI = ROOT / "wiki"
 STATIC = ROOT / "docs"
-SITE_URL = "https://phabzlabs.github.io/digital-rain/"
-RAW_IMAGES = "https://github.com/phabzlabs/digital-rain/raw/main/docs/"
+SITE_URL = "https://phabzlabz.github.io/digital-rain/"
+RAW_IMAGES = "https://github.com/phabzlabz/digital-rain/raw/main/docs/"
 
 
 # ---------- page list ----------
@@ -143,15 +143,15 @@ def convert(name):
 FOOTER = """<footer>
   <div class="wrap">
     <div>
-      <p>Made by <a href="https://github.com/phabzlabs">phabzlabs</a>, based on
+      <p>Made by <a href="https://github.com/phabzlabz">phabzlabz</a>, based on
         <a href="https://github.com/madkoding/matrix-screensaver">madkoding's original</a>.</p>
     </div>
     <div>
       <p class="links">
         <a href="docs.html">Documentation</a>
-        <a href="https://github.com/phabzlabs/digital-rain">Source code</a>
-        <a href="https://github.com/phabzlabs/digital-rain/issues">Report a problem</a>
-        <a href="https://github.com/phabzlabs/digital-rain/blob/main/LICENSE">GPL-3.0 licence</a>
+        <a href="https://github.com/phabzlabz/digital-rain">Source code</a>
+        <a href="https://github.com/phabzlabz/digital-rain/issues">Report a problem</a>
+        <a href="https://github.com/phabzlabz/digital-rain/blob/main/LICENSE">GPL-3.0 licence</a>
       </p>
       <p>Digital Rain is an unofficial, Matrix-inspired fan project, not affiliated with or
         endorsed by Warner Bros. Optional upscaling is based on
@@ -233,7 +233,7 @@ def render(name, groups, order):
       <a class="hide-sm" href="index.html#films">Films</a>
       <a class="hide-sm" href="index.html#install">Install</a>
       <a href="docs.html" aria-current="page">Docs</a>
-      <a href="https://github.com/phabzlabs/digital-rain">GitHub</a>
+      <a href="https://github.com/phabzlabz/digital-rain">GitHub</a>
     </nav>
   </header>
   <div class="docs">
